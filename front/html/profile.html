@@ -2,99 +2,118 @@
 <html lang="ru">
 
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <title>Профиль</title>
-    <link href='https://fonts.googleapis.com/css?family=Roboto:400,300,700,500' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="../fonts/font-awesome/css/font-awesome.min.css">
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="../css/normalize.css">
-    <!-- CSS reset -->
-    <link rel="stylesheet" href="../css/bootstrap.min.css">
-    <!-- Bootstrap Grid -->
-    <link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css">
-    <link rel="stylesheet" href="../css/animate.min.css">
-    <!-- Animate -->
-    <link rel="stylesheet" href="../css/style.css">
-    <!-- Resource style -->
-    <link rel="stylesheet" href="../css/magnific-popup.css">
-    <!-- Resource style -->
-    <style>
-      body {
-       background: rgb(248, 249, 250);
-      }
-     </style>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+  <title>Профиль</title>
+  <link href='https://fonts.googleapis.com/css?family=Roboto:400,300,700,500' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="../fonts/font-awesome/css/font-awesome.min.css">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="../css/normalize.css">
+  <!-- CSS reset -->
+  <link rel="stylesheet" href="../css/bootstrap.min.css">
+  <!-- Bootstrap Grid -->
+  <link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css">
+  <link rel="stylesheet" href="../css/animate.min.css">
+  <!-- Animate -->
+  <link rel="stylesheet" href="../css/style.css">
+  <!-- Resource style -->
+  <link rel="stylesheet" href="../css/magnific-popup.css">
+  <!-- Resource style -->
+  <style>
+    body {
+      background: rgb(248, 249, 250);
+    }
+  </style>
 </head>
 
-<body >
-    <script src="../js/bootstrap.bundle.js"></script>
-    <!-- Bootstrap -->
-    <script src="../js/wow.min.js"></script>
-    <!-- wow -->
-    <script src="../js/main.js"></script>
-    <!-- Main Script -->
-      <div class="shadow-lg border-bottom">
-      <div class="container">
-        
-        <header class="d-flex flex-wrap justify-content-center py-3 ">
-          <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none">
-            <svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap"></use></svg>
-            <span class="fs-4"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-geo-alt-fill" viewBox="0 0 16 16">
-              <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"/>
+<body>
+  <script src="../js/bootstrap.bundle.js"></script>
+  <!-- Bootstrap -->
+  <script src="../js/wow.min.js"></script>
+  <!-- wow -->
+  <script src="../js/main.js"></script>
+  <!-- Main Script -->
+  <div class="shadow-lg border-bottom">
+    <div class="container">
+
+      <header class="d-flex flex-wrap justify-content-center  ">
+        <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none">
+          
+          <span class="fs-4"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor"
+              class="bi bi-geo-alt-fill" viewBox="0 0 16 16">
+              <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z" />
             </svg></span>
-          </a>
-    
-          <ul class="nav nav-pills">
-            <li class="nav-item"><a href="#" class="nav-link active mx-2" aria-current="page" id="home_button">Home</a></li>
-            <li class="nav-item"><a href="#" class="nav-link mx-2" id="about_button">About</a></li>
-          </ul>
-          <div class=" text-end">
-            <button type="button" class="btn nav-item btn-outline-primary " id="login_button">Login</button>
-            <button type="button" class="btn  nav-item btn-outline-primary" id="signin_button">Sign-up</button>
+        </a>
+
+        <ul class="nav nav-pills align-items-center">
+          <li class="nav-item"><a href="#" class="nav-link  mx-2" aria-current="page" id="home_button">Home</a>
+          </li>
+          <li class="nav-item"><a href="#" class="nav-link mx-2" id="about_button">About</a></li>
+        </ul>
+        <div class=" text-end">
+          <div class="dropdown">
+            <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              <img src="../media/cat.jpg" class="d-block rounded-circle m-0" alt="Bootstrap Themes" width="35px"
+                height="35px" loading="lazy">
+
+
+            </button>
+            <ul class="dropdown-menu p-0 m-0" aria-labelledby="dropdownMenuButton">
+              <div class="btn-group-vertical col-lg-12">
+                <button type="button" class="btn nav-item btn-outline-primary col-lg-12 " id="login_button">Profile</button>
+                <button type="button" class="btn  nav-item btn-outline-danger col-lg-12" id="signin_button">Out of profile </button>
+              </div>
+            </ul>
           </div>
-        </header>
-      </div>
+
+
+        </div>
+      </header>
     </div>
-    <div class="text-bg-light p-0">
-        <div class="container mb-5 text-bg-light p-3">
-            <div class="row p-4 pb-0 pe-lg-0 pt-lg-5 align-items-center rounded-3 border shadow-lg">
-                <div class="row flex-lg-row-reverse  ">
-                    <div class="col-10 col-sm-8 col-lg-3 ">
-                      <div class="d-grid  gap-2 d-md-flex justify-content-lg-start">
-                        <img src="../media/cat.jpg" class="d-block mx-lg-auto rounded m-0" alt="Bootstrap Themes"  width="100%" height="100%" loading="lazy">
-                        
-                      </div>
-                      <div class="  ">
-                        <button type="button" class="btn btn-primary col-lg-12 btn-lg mb-5 mt-3" id="Edit_image_button">Edite</button>
-                        
-                      </div>
-                    </div>
-                    <div class="col-lg-9">
-                        <div class="col-lg-6 mt-1 mb-5">
-                            <h3 class="h3">Username:</h3>
-                            <h1 class="h1">Kivi</h1>
-                        </div>
-                      <div class="col-lg-9 p-lg-8 pt-lg-0 my-5">
-                        <h3 class="h3">Email:</h3>
-                        <h1 class="h1">example@mail.com </h1>
-                      </div>
-                      <div class="col-lg-9 p-lg-8 pt-lg-0 my-5">
-                        <h3 class="h3">Type of account: </h3>
-                        <h1 class="h1">User </h1>
-                      </div>
-                      <div class="col-lg-9 p-lg-8 pt-lg-0 my-5">
-                        <h3 class="h3">Number of points:</h3>
-                        <h1 class="h1">7 </h1>
-                      </div>
-                    </div>
-                    
-                  </div>
-                  
+  </div>
+  <div class="text-bg-light p-0">
+    <div class="container mb-5 text-bg-light  p-3">
+      <div class="row p-4 pb-0 pe-lg-0 pt-lg-5 align-items-center rounded-3 border shadow-lg">
+        <div class="row flex-lg-row-reverse  ">
+          <div class="col-10 col-sm-8 col-lg-3 ">
+            <div class="d-grid  gap-2 d-md-flex justify-content-lg-start">
+              <img src="../media/cat.jpg" class="d-block mx-lg-auto rounded m-0" alt="Bootstrap Themes" width="100%"
+                height="100%" loading="lazy">
+
+            </div>
+            <div class="  ">
+              <button type="button" class="btn btn-primary col-lg-12 btn-lg mb-5 mt-3"
+                id="Edit_image_button">Edite</button>
+
             </div>
           </div>
+          <div class="col-lg-9">
+            <div class="col-lg-6 mt-1 mb-5">
+              <h3 class="h3">Username:</h3>
+              <h1 class="h1">Kivi</h1>
+            </div>
+            <div class="col-lg-9 p-lg-8 pt-lg-0 my-5">
+              <h3 class="h3">Email:</h3>
+              <h1 class="h1">example@mail.com </h1>
+            </div>
+            <div class="col-lg-9 p-lg-8 pt-lg-0 my-5">
+              <h3 class="h3">Type of account: </h3>
+              <h1 class="h1">User </h1>
+            </div>
+            <div class="col-lg-9 p-lg-8 pt-lg-0 my-5">
+              <h3 class="h3">Number of points:</h3>
+              <h1 class="h1">7 </h1>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
     </div>
+  </div>
 </body>
 
 </html>
