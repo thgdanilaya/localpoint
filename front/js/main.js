@@ -13,19 +13,15 @@ function show_hide_password(target){
 	
 }
 //Сравнение паролей
-/* var button = document.getElementsById('sing_up');
 
-function srav(){
-    var diag_nap_uchr = document.getElementById('InputPassword');
-    var diag_osn = document.getElementById('repeatPassword');
-    if (diag_nap_uchr.value === diag_osn.value){
-        alert ("Совпадение");
-        button.disabled = false;
-        button.removeAttribute("disabled");
-      
+function srav(inppass, inprep){
+    let button = document.getElementById('sing_up');
+    var pass = document.getElementById(inppass);
+    var repeat_pass = document.getElementById(inprep);
+    if (pass.value === repeat_pass.value && pass.value != ""){
+        button.classList.remove("disabled");
     }
-    if(diag_nap_uchr.value != diag_osn.value){
-        button.setAttribute("disabled", "disabled");
-        alert ("Совпадение");
+    else{
+        button.classList.add("disabled");
     }
-  } */
+  }
