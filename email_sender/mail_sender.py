@@ -80,7 +80,7 @@ text = """
 
 """
 
-message = MIMEText('html', text)
+message = email.message.Message()
 message["From"] = sender_email
 message["To"] = receiver_email
 message["Subject"] = "Код подтверждения"
@@ -90,4 +90,4 @@ message.set_payload("asolpdpaolsjmdpa")
 context = ssl.create_default_context()
 with smtplib.SMTP_SSL(smtp_server, port, context=context) as server:
     server.login(sender_email, password)
-    server.sendmail(sender_email, receiver_email, code)
+    server.sendmail(sender_email, receiver_email, message)
