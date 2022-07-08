@@ -80,7 +80,7 @@ text = """
 
 """
 
-message = email.message.Message()
+message = MIMEText('html', text)
 message["From"] = sender_email
 message["To"] = receiver_email
 message["Subject"] = "Код подтверждения"
