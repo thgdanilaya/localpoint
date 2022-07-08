@@ -13,7 +13,7 @@
     integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
     crossorigin="anonymous"></script>
   <link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css">
-  <link rel="stylesheet" href="../js/main.js">
+  <link rel="stylesheet" href="../../static/registration/js/main.js">
   <!-- Bootstrap Grid -->
   <style>
     body {
@@ -32,7 +32,7 @@
     integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
     crossorigin="anonymous"></script>
   <!-- Bootstrap -->
-  <script src="/../../../static/registration/js/main.js"></script>
+  <script src="../../static/registration/js/main.js"></script>
   <!-- Main Script -->
   <div class="modal modal-signin position-absolute d-block bottom-100 py-5" tabindex="-1" role="dialog"
     id="modalSignin">
@@ -44,24 +44,24 @@
         </div>
 
         <div class="modal-body p-5 pt-0">
-          <form class="" method="post">
+          <form class="" action="{% url 'reg_success' %}" method="post">
              {% csrf_token %}
             <div class="form-floating mb-3">
-              <input type="email" class="form-control rounded-3" id="Inputemail" placeholder="name@example.com"
+              <input type="email" class="form-control rounded-3" name="Inputemail" id="Inputemail" placeholder="name@example.com"
                 required>
-              <label for="floatingInput">Электронная почта</label>
+              <label for="Inputemail">Электронная почта</label>
             </div>
             <div class="form-floating mb-3">
-              <input type="name" class="form-control rounded-3" id="Inputusername" placeholder="username" required>
-              <label for="floatingInput">Имя</label>
+              <input type="name" class="form-control rounded-3" name="Inputusername" id="Inputusername" placeholder="username" required>
+              <label for="Inputusername">Имя</label>
             </div>
             <div class="form-floating mb-3">
-              <input type="password" class="form-control rounded-3 pass" id="InputPassword" placeholder="Password"
+              <input type="password" class="form-control rounded-3 pass" name="InputPassword" id="InputPassword" placeholder="Password"
                 oninput="srav('InputPassword', 'repeatPassword');" required>
-              <label for="floatingPassword">Пароль</label>
+              <label for="InputPassword">Пароль</label>
             </div>
             <div class="form-floating mb-3">
-              <input type="password" class="form-control rounded-3 pass" id="repeatPassword" placeholder="Password"
+              <input type="password" class="form-control rounded-3 pass" name="repeatPassword" id="repeatPassword" placeholder="Password"
                 oninput="srav('InputPassword', 'repeatPassword');" required>
               <label for="repeatPassword">Повторите пароль</label>
 
