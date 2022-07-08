@@ -13,6 +13,7 @@
     integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
     crossorigin="anonymous"></script>
   <link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css">
+  <link rel="stylesheet" href="../js/main.js">
   <!-- Bootstrap Grid -->
   <style>
     body {
@@ -38,13 +39,13 @@
     <div class="modal-dialog" role="document">
       <div class="modal-content rounded-4 shadow">
         <div class="modal-header p-5 pb-4 border-bottom-0">
-          <!-- <h5 class="modal-title">Modal title</h5> -->
           <h2 class="fw-bold mb-0">Регистрация</h2>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
 
         <div class="modal-body p-5 pt-0">
-          <form class="">
+          <form class="" method="post">
+             {% csrf_token %}
             <div class="form-floating mb-3">
               <input type="email" class="form-control rounded-3" id="Inputemail" placeholder="name@example.com"
                 required>
@@ -74,7 +75,7 @@
             <button class="w-100 mb-2 btn btn-lg rounded-3 btn-primary disabled" type="submit"
               id="sing_up">Зарегестрироваться</button>
           </form>
-          Уже есть аккаунт? <a href="#" class="mx-0" id="about_button">Войди</a>
+          Уже есть аккаунт? <a href="#" class="mx-0" id="about_button">Войти</a>
         </div>
       </div>
     </div>

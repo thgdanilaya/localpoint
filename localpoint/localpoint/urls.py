@@ -17,13 +17,13 @@ from django.contrib import admin
 from django.urls import path
 
 from registration import views
-from registration.views import home
+from registration.views import home, LoginUser
 from django.urls import include
-
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('home/', home, name='home'),
-    path('registration/', views.Registration.as_view(), name='registration')
+    path('registration/', views.Registration.as_view(), name='registration'),
+    path('login/', views.LoginUser.as_view(), name='login')
 
 ]
