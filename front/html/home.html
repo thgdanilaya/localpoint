@@ -27,7 +27,7 @@
   <!-- Bootstrap -->
   <script src="../js/main.js"></script>
   <!-- Main Script -->
-  <div class="shadow-lg border-bottom">
+  <div id="navbar"class="shadow-lg border-bottom">
     <div class="container">
 
       <header class="d-flex flex-wrap justify-content-center py-3 ">
@@ -54,9 +54,25 @@
     </div>
   </div>
 
-  <div class="text-bg-light p-0">
-
+  <div  class="text-bg-light p-0">
+    <div class="bg-image" id="back-1"  style="background-image: url(../media/img7\ 1.png); width: 100%; ">
+      <div class="container ">
+        <div class=" row px-5 py-5 text-center align-items-center">
+          <h1 class="col-lg-12 display-2 mt-5 pt-5">LocalPoint</h1>
+          <div class=" col-lg-6 pt-1 mx-auto" >
+            <h2 class="h2" >Сервис для поиска тематических мест по интересам</h2>
+          </div>
+        </div>
+      </div>
+      
+    </div>
   </div>
+  <script>
+    let hei = document.documentElement.clientHeight;
+    let navb = document.getElementById("navbar");
+    let bg_1 = document.getElementById("back-1");
+    bg_1.style.height = (hei - navbar.offsetHeight) + "px";
+  </script>
 </body>
 
 </html>
