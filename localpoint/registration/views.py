@@ -8,7 +8,7 @@ from django.views.generic import CreateView
 from django.urls import reverse_lazy
 from django.contrib.auth.forms import AuthenticationForm
 
-from registration.forms import RegisterUserForm
+from registration.forms import RegisterUserForm, LoginUserForm
 
 
 class Registration(CreateView):
@@ -25,13 +25,37 @@ def reg_success(request):
     if request.method == 'POST':
         form_name = RegisterUserForm(request.POST)
         if form_name.is_valid():
-            username = form_name.cleaned_data.get("Inputusername")
-            email = form_name.cleaned_data.get("Inputemail")
-            password = form_name.cleaned_data.get("InputPassword")
+            username = request.POST['username']
+            email = request.POST['email']
+            password = request.POST['password']
+            # username = form_name.cleaned_data.get("Inputusername")
+            # email = form_name.cleaned_data.get("Inputemail")
+            # password = form_name.cleaned_data.get("InputPassword")
             print(username, email, password)
             b = Users(username=username, email=email, password=password)
             b.save()
             return render(request, 'registration/home.html')
+        else:
+            print(form_name)
+            #print(form_name.errors.as_data())
+            return render(request, 'registration/sign_up.html', {"from": form_name})
+
+    return HttpResponseNotFound("hello")
+
+
+def log_success(request):
+    if request.method == 'POST':
+        form_name = LoginUserForm(request.POST)
+        if form_name.is_valid():
+            username = request.POST['Inputusername']
+            email = request.POST['Inputemail']
+            password = request.POST['InputPassword']
+            # username = form_name.cleaned_data.get("Inputusername")
+            # email = form_name.cleaned_data.get("Inputemail")
+            # password = form_name.cleaned_data.get("InputPassword")
+            print(username, email, password)
+            return render(request, 'registration/home.html')
+
     return HttpResponseNotFound("hello")
 
 
