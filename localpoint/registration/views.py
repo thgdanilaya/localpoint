@@ -23,6 +23,10 @@ def home(request):
     return render(request, "registration/home.html")
 
 
+def map(request):
+    return render(request, "registration/map.html")
+
+
 def profile(request):
     return render(request, "registration/profile.html")
 
@@ -49,7 +53,6 @@ def log_success(request):
         if form_name.is_valid():
             email = request.POST['email']
             password = request.POST['password']
-            print(Users.objects.filter(email=email))
             if Users.objects.filter(email=email, password=password):
                 return render(request, 'registration/profile.html')
             else:

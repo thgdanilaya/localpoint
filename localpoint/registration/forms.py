@@ -25,3 +25,11 @@ class LoginUserForm(forms.ModelForm):
 
         def __str__(self):
             return self.email
+
+
+# class ProfileUserForm(forms.ModelForm):
+#     class Meta:
+#         model = UserProfile
+#         fields = ['email', 'username', 'account_type', 'profile_pic']
+
+
