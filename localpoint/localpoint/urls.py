@@ -28,7 +28,6 @@ urlpatterns = [
     path('login/', views.LoginUser.as_view(), name='login'),
     path('reg_success/', views.reg_success, name="reg_success"),
     path('log_success/', views.log_success, name="log_success"),
-    #url(r'^registration', views.log_success),
-
+    path('profile/', views.profile, name = "profile"),
 
 ]
