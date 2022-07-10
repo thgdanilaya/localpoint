@@ -130,3 +130,10 @@ STATICFILES_DIRS = []
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+
+EMAIL_PORT = 465  # для SSL подключения
+EMAIL_HOST = "smtp.yandex.ru"
+DEFAULT_FROM_EMAIL = "llocalpoint@yandex.ru"  # Ваш емайл
+receiver_email = "kazantsev.danilaya@yandex.ru"  # Емайл получателя
+EMAIL_HOST_PASSWORD = "jrjpblpsaifafkto"

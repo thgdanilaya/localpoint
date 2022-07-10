@@ -23,11 +23,12 @@ from django.urls import include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('home/', home, name='home'),
+    path('', home, name='home'),
     path('registration/', views.Registration.as_view(), name='registration'),
     path('login/', views.LoginUser.as_view(), name='login'),
     path('reg_success/', views.reg_success, name="reg_success"),
     path('log_success/', views.log_success, name="log_success"),
-    path('profile/', views.profile, name = "profile"),
+    path('profile/', views.profile, name="profile"),
+    path('map/', views.map, name="map")
 
 ]
