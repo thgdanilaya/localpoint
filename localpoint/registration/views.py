@@ -1,7 +1,11 @@
+import jwt
 from django.contrib.auth.views import LoginView
 from django.db import connection
 from django.http import HttpResponseNotFound
 from django.shortcuts import render, redirect
+from rest_framework_jwt.serializers import jwt_payload_handler
+
+from localpoint import settings
 from registration.models import Users
 from django.contrib.postgres.search import SearchVector
 
@@ -21,6 +25,10 @@ class Registration(CreateView):
 
 def home(request):
     return render(request, "registration/home.html")
+
+
+def about(request):
+    return render(request, "registration/about.html")
 
 
 def map(request):

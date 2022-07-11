@@ -57,7 +57,8 @@
                     </form>
                 </li>
                 <li class="nav-item">
-                    <form method="post">
+                    <form method="post" action="{% url 'about' %}">
+                        {% csrf_token %}
                         <button type="submit" class="btn btn-link p-0 mx-3"
                                 style="text-decoration: none; margin-top: -0.2em">О нас
                         </button>

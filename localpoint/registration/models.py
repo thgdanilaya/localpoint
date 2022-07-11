@@ -7,7 +7,8 @@ class Users(models.Model):
     email = models.EmailField(max_length=255)
     password = models.CharField(max_length=255)
     is_registered = models.BooleanField(default=True)
-    is_online = models.BooleanField
+    is_online = models.BooleanField(default=False)
+
 
 
 # class UserProfile(models.Model):

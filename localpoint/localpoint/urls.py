@@ -29,6 +29,7 @@ urlpatterns = [
     path('reg_success/', views.reg_success, name="reg_success"),
     path('log_success/', views.log_success, name="log_success"),
     path('profile/', views.profile, name="profile"),
-    path('map/', views.map, name="map")
+    path('map/', views.map, name="map"),
+    path('about/', views.about, name='about')
 
 ]
