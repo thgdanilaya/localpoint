@@ -3,7 +3,6 @@ from django.contrib.auth.views import LoginView
 from django.db import connection
 from django.http import HttpResponseNotFound
 from django.shortcuts import render, redirect
-from rest_framework_jwt.serializers import jwt_payload_handler
 
 from localpoint import settings
 from registration.models import Users
@@ -36,7 +35,9 @@ def map(request):
 
 
 def profile(request):
-    return render(request, "registration/profile.html")
+    tokenn = request.COOKIES.get('csrftoken')
+    username = Users.objects.get(tokenn=tokenn)
+    return render(request, "registration/profile.html", {"username": username.username,  "email": username.email})
 
 
 def reg_success(request):
@@ -56,13 +57,17 @@ def reg_success(request):
 
 
 def log_success(request):
+    username = {}
     if request.method == 'POST':
         form_name = LoginUserForm(request.POST)
         if form_name.is_valid():
             email = request.POST['email']
             password = request.POST['password']
             if Users.objects.filter(email=email, password=password):
-                return render(request, 'registration/profile.html')
+                Users.objects.filter(email=email, password=password).update(is_registered=1)
+                Users.objects.filter(email=email, password=password).update(tokenn=request.COOKIES.get('csrftoken'))
+                username = Users.objects.get(email=email)
+                return render(request, 'registration/profile.html', {"username": username.username,  "email": username.email})
             else:
                 return render(request, 'registration/sign_in.html')
 
