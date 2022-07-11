@@ -1,4 +1,3 @@
-import jwt
 from django.contrib.auth.views import LoginView
 from django.db import connection
 from django.http import HttpResponseNotFound
