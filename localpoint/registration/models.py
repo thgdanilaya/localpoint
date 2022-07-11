@@ -8,7 +8,7 @@ class Users(models.Model):
     password = models.CharField(max_length=255)
     is_registered = models.BooleanField(default=True)
     is_online = models.BooleanField(default=False)
-
+    tokenn = models.CharField(max_length=255, default="", null=True)
 
 
 # class UserProfile(models.Model):

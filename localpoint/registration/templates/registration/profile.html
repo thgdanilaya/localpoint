@@ -32,8 +32,8 @@
     <div class="container">
         <header class="d-flex flex-wrap justify-content-center py-3 ">
             <div class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none">
-                <form method="post">
-
+                <form method="post" action="{% url 'home' %}">
+                    {% csrf_token %}
                     <button type="submit" class="btn btn-link p-0 " style="text-decoration: none; margin-top: -0.2em">
               <span class="fs-4">
                 <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor"
@@ -42,21 +42,21 @@
                 </svg>
               </span>
                     </button>
-
-
                 </form>
             </div>
 
             <ul class="nav nav-pills align-items-center">
                 <li class="nav-item">
-                    <form method="post">
+                    <form method="post" action="{% url 'map' %}">
+                        {% csrf_token %}
                         <button type="submit" class="btn btn-link p-0"
                                 style="text-decoration: none; margin-top: -0.2em">Карта
                         </button>
                     </form>
                 </li>
                 <li class="nav-item">
-                    <form method="post">
+                    <form method="post" action="{% url 'about' %}">
+                                                {% csrf_token %}
                         <button type="submit" class="btn btn-link p-0 mx-3"
                                 style="text-decoration: none; margin-top: -0.2em">О нас
                         </button>
@@ -64,13 +64,13 @@
                 </li>
             </ul>
             <div class=" text-end"></div>
-            <form method="post">
-
+            <form method="post" action="{% url 'profile' %}">
+                {% csrf_token %}
                 <button type="submit" class="btn nav-item btn-outline-primary " id="account">Аккаунт</button>
             </form>
             <form method="post">
+                {% csrf_token %}
                 <button type="submit" class="btn  nav-item btn-outline-danger mx-2" id="signout_button">Выйти</button>
-
             </form>
 
         </header>
@@ -83,12 +83,13 @@
             <div class="row flex-lg-row-reverse  ">
                 <div class="col-10 col-sm-8 col-lg-3 ">
                     <div class="d-grid  gap-2 d-md-flex justify-content-lg-start">
-                        <img src="../media/cat.jpg" class="d-block mx-lg-auto rounded m-0" alt="Bootstrap Themes"
+                        <img src="../../static/registration/imges/cat.jpg" class="d-block mx-lg-auto rounded m-0" alt="Bootstrap Themes"
                              width="100%"
                              height="100%" loading="lazy">
 
                     </div>
                     <form method="post">
+                        {% csrf_token %}
                         <div class="  ">
                             <button type="submit" class="btn btn-primary col-lg-12 btn-lg mb-5 mt-3"
                                     id="Edit_image_button">Изменить
@@ -98,14 +99,15 @@
                     </form>
 
                 </div>
+                {% block content %}
                 <div class="col-lg-9">
                     <div class="col-lg-6 mt-1 mb-5">
                         <h3 class="h3">Имя:</h3>
-                        <h1 class="h1">Kivi</h1>
+                        <h1 class="h1">{{ username }}</h1>
                     </div>
                     <div class="col-lg-9 p-lg-8 pt-lg-0 my-5">
                         <h3 class="h3">Почта:</h3>
-                        <h1 class="h1">example@mail.com </h1>
+                        <h1 class="h1">{{ email }}</h1>
                     </div>
                     <div class="col-lg-9 p-lg-8 pt-lg-0 my-5">
                         <h3 class="h3">Тип аккаунта: </h3>
@@ -116,7 +118,7 @@
                         <h1 class="h1">7 </h1>
                     </div>
                 </div>
-
+                {% endblock %}
             </div>
 
         </div>
